@@ -1,5 +1,5 @@
 url: https://y7kim.github.io
-baseurl: /foodtopia/
+baseurl: /foodtopia
 
 # Site settings
 title: Foodtopia
@@ -8,9 +8,44 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: E25924
-  secondary: fec503  
+  primary: D8235E
+  secondary: 9A2B6E 
   secondary-dark: 333
+
+
+# Thumbs
+
+defaults:
+  -
+    scope:
+      type: "posts"
+      category: "News"
+    values:
+      subtitle: Foodtopia
+      layout: default
+      modal-id: 6
+      date: 2014-12-03
+      img: news.png
+      thumbnail: news-thumb.png
+      alt: foodtopia
+      project-date: December 2015
+      client: Foodtopia
+
+defaults:
+  -
+    scope:
+      type: "posts"
+      category: "Events"
+    values:
+      subtitle: Foodtopia
+      layout: default
+      modal-id: 6
+      date: 2014-12-03
+      img: events.png
+      thumbnail: events-thumb.png
+      alt: foodtopia
+      project-date: December 2015
+      client: Foodtopia
 
 # Team names, titles and social links
 people:
