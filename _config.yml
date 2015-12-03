@@ -19,27 +19,10 @@ defaults:
   -
     scope:
       type: "posts"
-      category: "News"
     values:
       subtitle: Foodtopia
       layout: default
-      modal-id: 6
-      date: 2014-12-03
-      img: news.png
-      thumbnail: news-thumb.png
-      alt: foodtopia
-      project-date: December 2015
-      client: Foodtopia
-
-defaults:
-  -
-    scope:
-      type: "posts"
-      category: "Events"
-    values:
-      subtitle: Foodtopia
-      layout: default
-      modal-id: 6
+      modal-id: 3
       date: 2014-12-03
       img: events.png
       thumbnail: events-thumb.png
