@@ -1,5 +1,6 @@
+
 url: https://y7kim.github.io
-baseurl: /foodtopia
+baseurl: /foodtopia/
 
 # Site settings
 title: Foodtopia
@@ -12,6 +13,8 @@ color:
   secondary: 9A2B6E 
   secondary-dark: 333
 
+page_folder: pages/
+app_folder: app/
 
 # Thumbs
 
@@ -21,7 +24,7 @@ defaults:
       type: "posts"
     values:
       subtitle: Foodtopia
-      layout: default
+      layout: page
       modal-id: 3
       date: 2014-12-03
       img: events.png
@@ -82,12 +85,8 @@ social:
     url: http://twitter.com/jekyllrb
   - title: facebook
     url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
+  - title: instagram 
     url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
 
 # Postal address (add as many lines as necessary)
 address:

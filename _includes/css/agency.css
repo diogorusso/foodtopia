@@ -286,11 +286,53 @@ header {
     background-image: url({{site.baseurl}}/img/header-bg.jpg);
     background-position: center center;
     background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
     background-size: cover;
     -o-background-size: cover;
 }
+
+
+#header_app{
+
+    max-height: 250px;
+}
+
+#header_about {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/about.jpg);
+}
+
+#header_social {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/social.jpg);
+}
+
+#header_competition {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/competition.jpg);
+}
+
+#header_events_all {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/events_all.jpg);
+}
+
+#header_news_all {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/news_all.jpg);
+}
+
+#header_rent {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/rent.jpg);
+}
+
+#header_restaurant {
+  
+    background-image: url({{site.baseurl}}img/headers_pages/restaurant.jpg);
+}
+
 
 header .intro-text {
     padding-top: 100px;

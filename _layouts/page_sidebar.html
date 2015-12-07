@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+
+    <body id="page-top" class="index">
+
+    {% include header_pages.html %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% include page_sidebar.html %}
+                    <div class="col-lg-9 text-center">
+                    {{ content }} <!-- CONTENT -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    {% include clients.html %}
+    {% include contact.html %}
+    {% include footer.html %}
+    {% include modals.html %}
+    {% include js.html %}
+
+
+    </body>
+</html>

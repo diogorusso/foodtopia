@@ -35,3 +35,21 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
+
+// FIX SIDE on SCROLL -> D!
+
+ var sideTop = $('.sidebar_page').offset().top-111;
+ var sideTop = $('.sidebar_page').offset().top+500;
+
+      $(window).scroll(function() {
+          if ($(window).scrollTop() > sideTop) {
+              $('.sidebar_page').addClass('side-sticky');
+          }
+          else {
+              $('.sidebar_page').removeClass('side-sticky');
+          }
+
+          if($(window).scrollTop() > sideBottom){ //scroll size
+            $('.sidebar_page').removeClass('side-sticky');
+          }
+      });
