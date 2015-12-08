@@ -9,12 +9,23 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: D8235E
-  secondary: 9A2B6E 
-  secondary-dark: 333
+  primary: D85523
+  secondary: fff600
+  secondary-dark: d81717
+
+# Folders
 
 page_folder: pages/
 app_folder: app/
+img_content: img/content_pages/
+img_app: img/app/
+img_site: img/site/
+img_headers: img/headers_pages/
+
+# Header Pages
+
+header_top: 165px
+header_bottom: 35px
 
 # Thumbs
 

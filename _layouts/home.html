@@ -7,11 +7,19 @@
     <body id="page-top" class="index">
 
     {% include header.html %}
-    {% include services.html %}
+    <section id="services">
+        {% include services.html %}
+    </section>
+      <section id="portfolio" class="bg-light-gray ">
     {% include events_grid.html %}
+    </section>
     {% include about.html %}
+    <section id="news" class="bg-light-gray">
     {% include news_grid.html %}
+    </section>
+    <section>
     {% include clients.html %}
+    </section>
     {% include contact.html %}
     {% include footer.html %}
     {% include modals.html %}

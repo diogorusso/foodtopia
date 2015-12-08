@@ -78,13 +78,7 @@ h6 {
     margin: 0 auto;
 }
 
-.bg-light-gray {
-    background-color: #f7f7f7;
-}
 
-.bg-darkest-gray {
-    background-color: #222;
-}
 
 .btn-primary {
     border-color: #{{ site.color.primary }};
@@ -283,7 +277,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url({{site.baseurl}}/img/header-bg.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}header-bg.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover !important;
@@ -293,53 +287,73 @@ header {
 }
 
 
+/* ALTURA DO BANNER CONTROLADA PELO PADDING DO TITULO nas PAGES */
+
 #header_app{
 
-    max-height: 250px;
+    max-height: {{site.header_size}};
 }
 
 #header_about {
   
-    background-image: url({{site.baseurl}}img/headers_pages/about.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}about.jpg);
+    max-height: {{site.header_sizel}};
 }
 
 #header_social {
   
-    background-image: url({{site.baseurl}}img/headers_pages/social.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}social.jpg);
+    max-height: {{site.header_sizel}};
 }
 
 #header_competition {
   
-    background-image: url({{site.baseurl}}img/headers_pages/competition.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}competition.jpg);
 }
 
 #header_events_all {
   
-    background-image: url({{site.baseurl}}img/headers_pages/events_all.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}events_all.jpg);
 }
 
 #header_news_all {
   
-    background-image: url({{site.baseurl}}img/headers_pages/news_all.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}news_all.jpg);
 }
 
-#header_rent {
+#header_space {
   
-    background-image: url({{site.baseurl}}img/headers_pages/rent.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}rent.jpg);
 }
 
 #header_restaurant {
   
-    background-image: url({{site.baseurl}}img/headers_pages/restaurant.jpg);
+    background-image: url({{site.baseurl}}{{site.img_headers}}restaurant.jpg);
 }
 
+/* altura banner pages Res < 768 */
+
+header .intro-home {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+
+header .intro-home .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: {{site.header_top}};
+    padding-bottom: {{site.header_bottom}};
 }
 
-header .intro-text .intro-lead-in {
+header .intro-home .intro-lead-in {
     margin-bottom: 25px;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
@@ -356,21 +370,32 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+/* altura banner pages Res > 768 */
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: {{site.header_top}};
+        padding-bottom: {{site.header_bottom}};
     }
 
-    header .intro-text .intro-lead-in {
+    header .intro-home .intro-lead-in {
         margin-bottom: 25px;
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 33px;
+        font-size: 18px;
         font-style: italic;
         line-height: 40px;
+        font-weight: 100;
     }
 
     header .intro-text .intro-heading {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+
+    header .intro-home .intro-heading {
         margin-bottom: 30px;
         text-transform: uppercase;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -410,19 +435,19 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-#portfolio .portfolio-item {
+.portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+.portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -434,11 +459,11 @@ section h3.section-subheading {
     background: rgba({{ site.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -449,16 +474,16 @@ section h3.section-subheading {
     color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+.portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0;
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+.portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
     padding: 25px;
     max-width: 400px;
@@ -466,42 +491,42 @@ section h3.section-subheading {
     background-color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+.portfolio .portfolio-item .portfolio-caption h4 {
     margin: 0;
     text-transform: none;
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
+.portfolio .portfolio-item .portfolio-caption p {
     margin: 0;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
 }
 
-#portfolio * {
+.portfolio * {
     z-index: 2;
 }
 
 @media(min-width:767px) {
-    #portfolio .portfolio-item {
+    .portfolio .portfolio-item {
         margin: 0 0 30px;
     }
 }
 
 
-#portfolio .portfolio-item {
+.portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+.portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -513,11 +538,11 @@ section h3.section-subheading {
     background: rgba({{ site.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+.portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -528,83 +553,7 @@ section h3.section-subheading {
     color: #fff;
 }
 
-#news .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
-    margin-top: -12px;
-}
 
-#news .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#news .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
-    margin: 0;
-}
-
-#news .portfolio-item .portfolio-caption {
-    margin: 0 auto;
-    padding: 25px;
-    max-width: 400px;
-    text-align: center;
-    background-color: #fff;
-}
-
-#news .portfolio-item .portfolio-caption h4 {
-    margin: 0;
-    text-transform: none;
-}
-
-#news .portfolio-item .portfolio-caption p {
-    margin: 0;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-}
-
-#news * {
-    z-index: 2;
-}
-
-@media(min-width:767px) {
-    #news .portfolio-item {
-        margin: 0 0 30px;
-    }
-}
-
-#news .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
-}
-
-#news .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-#news .portfolio-item .portfolio-link .portfolio-hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-    background: rgba(254,209,54,.9); /* Fallback when no plugin support */
-    background: rgba({{ site.color.primary | hex_to_rgb | join: ',' }}, .9);
-}
-
-#news .portfolio-item .portfolio-link .portfolio-hover:hover {
-    opacity: 1;
-}
-
-#news .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
 
 .timeline {
     position: relative;
@@ -832,7 +781,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    background-image: url({{site.baseurl}}{{site.img_site}}map-image.png);
     background-position: center;
     background-repeat: no-repeat;
 }

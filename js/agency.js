@@ -36,10 +36,43 @@ $('div.modal').on('show.bs.modal', function() {
 	}
 });
 
+
+// RESPONSIVE EMBED VIDEO Youtube + VIMEO
+
+$(function() {
+    
+    var $allVideos = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], object, embed"),
+    $fluidEl = $("figure");
+        
+  $allVideos.each(function() {
+  
+    $(this)
+      // jQuery .data does not work on object/embed elements
+      .attr('data-aspectRatio', this.height / this.width)
+      .removeAttr('height')
+      .removeAttr('width');
+  
+  });
+  
+  $(window).resize(function() {
+  
+    var newWidth = $fluidEl.width();
+    $allVideos.each(function() {
+    
+      var $el = $(this);
+      $el
+          .width(newWidth)
+          .height(newWidth * $el.attr('data-aspectRatio'));
+    
+    });
+  
+  }).resize();
+
+});
+
 // FIX SIDE on SCROLL -> D!
 
  var sideTop = $('.sidebar_page').offset().top-111;
- var sideTop = $('.sidebar_page').offset().top+500;
 
       $(window).scroll(function() {
           if ($(window).scrollTop() > sideTop) {
@@ -53,3 +86,4 @@ $('div.modal').on('show.bs.modal', function() {
             $('.sidebar_page').removeClass('side-sticky');
           }
       });
+
