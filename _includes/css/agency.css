@@ -195,7 +195,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #{{ site.color.secondary }};
+    color: #{{ site.color.primary }};
 }
 
 .navbar-default .navbar-collapse {
@@ -359,6 +359,7 @@ header .intro-home .intro-lead-in {
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
+    text-transform: lowercase !important;
 }
 
 header .intro-text .intro-heading {
@@ -382,7 +383,7 @@ header .intro-text .intro-heading {
         font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 18px;
         font-style: italic;
-        line-height: 40px;
+        line-height: 27px;
         font-weight: 100;
     }
 
@@ -405,24 +406,7 @@ header .intro-text .intro-heading {
     }
 }
 
-section {
-    padding: 100px 0;
-}
 
-section h2.section-heading {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 40px;
-}
-
-section h3.section-subheading {
-    margin-bottom: 75px;
-    text-transform: none;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-}
 
 @media(min-width:768px) {
     section {
@@ -431,8 +415,10 @@ section h3.section-subheading {
 }
 
 .service-heading {
-    margin: 15px 0;
+    margin: 25px 0;
     text-transform: none;
+    font-weight:lighter;
+    font-size: 20px;
 }
 
 .portfolio .portfolio-item {
@@ -784,7 +770,9 @@ section#contact {
     background-image: url({{site.baseurl}}{{site.img_site}}map-image.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 section#contact .section-heading {
     color: #fff;
