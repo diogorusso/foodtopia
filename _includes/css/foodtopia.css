@@ -1,4 +1,9 @@
 
+.container{
+  padding-left: none !important;
+  padding-right: none !important; 
+}
+
 .side-sticky{
 
     position: fixed;
