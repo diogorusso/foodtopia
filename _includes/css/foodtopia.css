@@ -4,6 +4,11 @@
   padding-right: none !important; 
 }
 
+.row{
+  margin-left: none !important;
+  margin-right: none !important; 
+}
+
 .side-sticky{
 
     position: fixed;
