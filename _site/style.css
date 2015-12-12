@@ -1085,7 +1085,7 @@ section h3.section-subheading {
     height: auto   !important;
   }
     figure { display: block; background: #eee; padding: 10px; text-align: center; }
-    figcaption { display: block; margin: 10px 0; font-style: italic; font-size: 14px; orphans: 2; }
+    /*figcaption { display: block; margin: 10px 0; font-style: italic; font-size: 14px; orphans: 2; }*/
 
 /* LOGIN */
 
