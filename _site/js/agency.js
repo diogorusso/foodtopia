@@ -70,20 +70,29 @@ $(function() {
 
 });
 
-// FIX SIDE on SCROLL -> D!
 
- var sideTop = $('.sidebar_page').offset().top-111;
 
-      $(window).scroll(function() {
-          if ($(window).scrollTop() > sideTop) {
-              $('.sidebar_page').addClass('side-sticky');
-          }
-          else {
-              $('.sidebar_page').removeClass('side-sticky');
-          }
 
-          if($(window).scrollTop() > sideBottom){ //scroll size
-            $('.sidebar_page').removeClass('side-sticky');
-          }
-      });
-
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+      interval:  3000
+  });
+  
+  var clickEvent = false;
+  $('#myCarousel').on('click', '#myCarousel .nav a', function() {
+      clickEvent = true;
+      $('#myCarousel .step .nav li').removeClass('active');
+      $(this).parent().addClass('active');    
+  }).on('slid.bs.carousel', function(e) {
+    if(!clickEvent) {
+      var count = $('#myCarousel .nav').children().length -1;
+      var current = $('#myCarousel .nav li.active');
+      current.removeClass('active').next().addClass('active');
+      var id = parseInt(current.data('slide-to'));
+      if(count == id) {
+        $('#myCarousel .nav li').first().addClass('active');  
+      }
+    }
+    clickEvent = false;
+  });
+});

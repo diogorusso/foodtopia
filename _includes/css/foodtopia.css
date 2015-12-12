@@ -9,7 +9,7 @@
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    background: #859AD4 !important;
+    background: #FFA500 !important;
 }
 
 .service-box{
@@ -499,8 +499,8 @@ Image placeholders: placemi.com
 /* WIZARD */
 .wizard {
     margin: 20px auto;
-    background: #fff;
-    padding-bottom:25px;
+    background: #FBF429;
+    padding:25px;
 }
 
     .wizard .nav-tabs {
@@ -592,11 +592,8 @@ span.round-tab:hover {
 }
 
 .wizard .nav-tabs > li a {
-    width: 70px;
-    height: 70px;
-    margin: 20px auto;
-    border-radius: 100%;
-    padding: 0;
+  padding: 0;
+  text-align: center;
 }
 
     .wizard .nav-tabs > li a:hover {
@@ -814,3 +811,126 @@ border-color: #23A4F2;
   border-radius: 50%;
 }
 
+/*
+
+COMPETITION STEPS
+
+*/
+
+
+
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  margin-left: 50px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #5A55A3;
+  background-image: #5A55A3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #5A55A3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+
+
+
+#myCarousel .nav a small
+{
+    display: block;
+}
+#myCarousel .nav
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+
+.addon-facebook {
+  background-color: #345387;
+  border: none;
+  border-radius: 2px 0px 0px 2px;
+  color: #fff;
+}
+
+.btn-facebook,
+.btn-facebook:hover {
+  background-color: #4b6ea9;
+  color: #fff;
+  border-radius: 0px 2px 2px 0px;
+  font-size: 15px;
+}
+
+.addon-twitter {
+  background-color: #00c6e9;
+  border: none;
+  border-radius: 2px 0px 0px 2px;
+  color: #fff;
+}
+
+.btn-twitter,
+.btn-twitter:hover {
+  background-color: #00d7fa;
+  color: #fff;
+  border-radius: 0px;
+  font-size: 15px;
+}

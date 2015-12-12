@@ -10,7 +10,7 @@ description: "Write an awesome description for your new site here. You can edit 
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary: D85523
-  secondary: fff600
+  secondary: FFA500
   secondary-dark: 333
 
 # Folders
