@@ -1,14 +1,4 @@
 
-.container{
-  padding-left: none !important;
-  padding-right: none !important; 
-}
-
-.row{
-  margin-left: none !important;
-  margin-right: none !important; 
-}
-
 .side-sticky{
 
     position: fixed;

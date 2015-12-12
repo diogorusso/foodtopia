@@ -1,8 +1,8 @@
 ---
-title: 18 May
+title: 10 Dec
 category: Events
 id: events
 description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
-thumbnail: event_5.jpg
+thumbnail: event_2.jpg
 ---
 
